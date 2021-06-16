@@ -40,7 +40,7 @@ func main() {
 	commandLine.StringVar(&conf.Scope, "scope", "subs", "Scope to include:\nstrict = specified domain only\nwww = specified domain and \"www\" subdomain\nsubs = specified domain and subdomains\nyolo = everything")
 	commandLine.BoolVar(&conf.Wayback, "usewayback", false, "Query wayback machine for URLs and add them as seeds for the crawler")
 	commandLine.BoolVar(&conf.Plain, "plain", false, "Don't use colours or print the banners to allow for easier parsing")
-	commandLine.BoolVar(&conf.Nocolor, "nocolor", false, "Print the banners but without ANSI color codes")
+	commandLine.BoolVar(&conf.Nocolor, "nocolor", true, "Print the banners but without ANSI color codes")
 	commandLine.BoolVar(&conf.Runlinkfinder, "linkfinder", false, "Run linkfinder on javascript files.")
 
 	// which data to include in output?
@@ -53,7 +53,7 @@ func main() {
 	commandLine.BoolVar(&conf.IncludeSitemap, "sitemap", false, "Include sitemap.xml entries in output")
 	commandLine.BoolVar(&conf.IncludeWayback, "wayback", false, "Include wayback machine entries in output")
 	commandLine.BoolVar(&conf.IncludeAll, "all", true, "Include everything in output - this is the default, so this option is superfluous")
-	commandLine.BoolVar(&conf.Insecure, "insecure", false, "Ignore invalid HTTPS certificates")
+	commandLine.BoolVar(&conf.Insecure, "insecure", true, "Ignore invalid HTTPS certificates")
 	commandLine.Parse(os.Args[1:])
 
 	// Verify flags
