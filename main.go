@@ -23,15 +23,8 @@ import (
 var out io.Writer = os.Stdout
 
 func banner(au aurora.Aurora) {
-	fmt.Fprint(out, au.BrightRed(`
-██╗  ██╗ █████╗ ██╗  ██╗██████╗  █████╗ ██╗    ██╗██╗     ███████╗██████╗
-██║  ██║██╔══██╗██║ ██╔╝██╔══██╗██╔══██╗██║    ██║██║     ██╔════╝██╔══██╗
-███████║███████║█████╔╝ ██████╔╝███████║██║ █╗ ██║██║     █████╗  ██████╔╝
-██╔══██║██╔══██║██╔═██╗ ██╔══██╗██╔══██║██║███╗██║██║     ██╔══╝  ██╔══██╗
-██║  ██║██║  ██║██║  ██╗██║  ██║██║  ██║╚███╔███╔╝███████╗███████╗██║  ██║
-╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝ ╚══════╝╚══════╝╚═╝  ╚═╝
-`))
-	fmt.Fprintln(out, aurora.BgBlue(au.BrightYellow("                        Crafted with <3 by hakluke                        ")))
+	fmt.Fprint(out, au.BrightRed(""))
+	fmt.Fprintln(out, aurora.BgBlue(au.BrightYellow("")))
 }
 
 func main() {
